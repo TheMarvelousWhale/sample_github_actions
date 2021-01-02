@@ -1,0 +1,13 @@
+name: proselint-this-filthy-repo
+on: 
+  push:
+    branch:
+      - master
+   
+jobs:
+  proselint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: run proselint
+      uses: proselint *.md
